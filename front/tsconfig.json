@@ -1,0 +1,58 @@
+{
+  "compilerOptions": {
+    /* Папка исходников и сборки */
+    "rootDir": "./src",                   // Исходный код
+    "outDir": "./dist",                   // Папка сборки (Vite будет использовать dist)
+    
+    /* Модульная система и таргет */
+    "target": "ESNext",                   // Современный JS
+    "module": "ESNext",                   // ES модули (Vite поддерживает)
+    "moduleResolution": "bundler",       // Современное разрешение модулей
+    "esModuleInterop": true,              // Импорт CommonJS модулей
+    "allowSyntheticDefaultImports": true, // Для совместимости
+
+    /* JSX и React */
+    "jsx": "react-jsx",                   // JSX трансформация для React 17+
+    
+    /* Типизация */
+    "strict": true,                        // Включаем все строгие проверки
+    "noImplicitAny": true,                 // Ошибка, если тип any не указан явно
+    "noImplicitThis": true,                // Ошибка, если this имеет тип any
+    "strictNullChecks": true,              // Проверка null и undefined
+    "strictFunctionTypes": true,
+    "strictBindCallApply": true,
+    "noImplicitReturns": true,             // Все функции должны возвращать значение
+    "noFallthroughCasesInSwitch": true,    // Проверка switch
+    "exactOptionalPropertyTypes": true,
+    "noUncheckedIndexedAccess": true,      // Проверка доступа к массивам/объектам
+    "forceConsistentCasingInFileNames": true, // Согласованность регистра файлов
+
+    /* Source maps и declaration */
+    "sourceMap": true,                     // Для отладки
+    "declaration": true,                   // Генерация .d.ts для библиотек (если нужно)
+    "declarationMap": true,                // Source map для деклараций
+
+    /* Оптимизация работы с библиотеками */
+    "skipLibCheck": true,                  // Не проверять типы в node_modules
+    "allowJs": true,                       // Можно подключать JS файлы
+    "isolatedModules": true,               // Для корректной работы с Vite + Babel
+
+    /* Важные флаги для современных приложений */
+    "verbatimModuleSyntax": true,
+    "moduleDetection": "force",
+    "noUncheckedSideEffectImports": true
+  },
+
+  "include": [
+    "./src",           // Исходники
+    "./global.d.ts"    // Глобальные типы, если нужны
+  ],
+
+  "exclude": [
+    "node_modules",
+    "dist",
+    "build",
+    "**/*.test.ts",
+    "**/*.spec.ts"
+  ]
+}
