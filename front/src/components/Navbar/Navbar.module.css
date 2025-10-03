@@ -1,0 +1,18 @@
+.navbar {
+    background-color: blanchedalmond;
+    display: grid;
+    grid-template-columns: repeat(20, 1fr);
+    gap: 10px;
+}
+
+.navbar__navlinks-box {
+    
+}
+
+.logo {
+
+}
+
+.navbar__auth {
+
+}
